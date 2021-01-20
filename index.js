@@ -1,6 +1,6 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
-const config = require('./config.json')
+const config = require('./config.js')
 const token = config.token
 const status = config.status
 const command = require('./command')
@@ -11,7 +11,7 @@ const missingPermissions = new Discord.MessageEmbed().setTitle('🛑 MISSING PER
 
 
 client.on('ready', () => {
-    console.log('Client is ready')
+    console.log(`Succesfully logged in as ${client.user.username}.`)
 
     client.user.setActivity(status);
 
